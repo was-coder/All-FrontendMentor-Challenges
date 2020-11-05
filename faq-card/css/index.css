@@ -1,0 +1,93 @@
+:root {
+  --dark_blue: hsl(238, 29%, 16%);
+  --soft_red: hsl(14, 88%, 65%);
+  --darker_grayish_blue: hsl(237, 12%, 33%);
+  --dark_grayish_blue: hsl(240, 6%, 50%);
+  --soft_violet: hsl(273, 75%, 66%);
+  --soft_blue: hsl(240, 73%, 65%);
+  --light_grayish_blue: hsl(240, 6%, 50%);
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  font-size: 12px;
+  background-color: var(--soft_blue);
+  font-family: 'Kumbh Sans', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  text-align: center;
+  margin: auto;
+  width: 90%;
+}
+
+@media (min-width: 380px) {
+  .main {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 90%;
+  }
+}
+
+input {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  display: block;
+  padding: 5px;
+  width: 100%;
+  font-weight: 700;
+  z-index: 10;
+}
+
+label::after {
+  content: '\2b9e';
+  font-weight: bolder;
+  padding-left: 5px;
+}
+
+input:checked + label::after {
+  content: '\2b9f';
+  -webkit-transition: 0.9s;
+  transition: 0.9s;
+}
+
+input:checked ~ .panel {
+  display: block;
+  -webkit-transition: 0.9s;
+  transition: 0.9s;
+}
+
+.panel {
+  display: none;
+  width: 80%;
+  margin: auto;
+}
+/*# sourceMappingURL=index.css.map */

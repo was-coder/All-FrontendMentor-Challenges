@@ -1,0 +1,63 @@
+@import 'standard';
+
+.body {
+    font-size: 12px;
+    background-color: var(--soft_blue);
+    font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+};
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: center;
+    margin:auto;
+    width: 90%;
+
+
+    @include get-desktop {
+        flex-direction: row;
+        width: 90%;
+    }
+}
+
+// Start of accordion styling
+input {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+    display: block;
+    padding: 5px;
+    width: 100%;
+    font-weight: 700;
+    z-index: 10;
+}
+
+label::after {
+    content: '\2b9e';
+    font-weight: bolder;
+    padding-left: 5px;
+}
+
+input:checked+label::after {
+    content: '\2b9f';
+    transition: 0.9s;
+}
+
+input:checked~.panel {
+    display: block;
+    transition: 0.9s;
+}
+
+.panel {
+    display: none;
+    width: 80%;
+    margin: auto;
+}
+// End of accordion styling

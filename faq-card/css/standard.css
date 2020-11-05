@@ -1,0 +1,15 @@
+:root {
+  --dark_blue: hsl(238, 29%, 16%);
+  --soft_red: hsl(14, 88%, 65%);
+  --darker_grayish_blue: hsl(237, 12%, 33%);
+  --dark_grayish_blue: hsl(240, 6%, 50%);
+  --soft_violet: hsl(273, 75%, 66%);
+  --soft_blue: hsl(240, 73%, 65%);
+  --light_grayish_blue: hsl(240, 6%, 50%);
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+}
+/*# sourceMappingURL=standard.css.map */
